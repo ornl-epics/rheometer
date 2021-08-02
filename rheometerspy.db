@@ -1,0 +1,216 @@
+##########################################################
+#Reads what the hardware is sending to vendor software   #
+##########################################################
+
+
+record(stringin, "BL6:SE:Rheometer:StrReadRheoVersion") {
+  field(DESC, "Read Data sent from Hardware rheoversion")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadRheoVersion RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+
+record(stringin, "BL6:SE:Rheometer:StrReadTxFromHardware") {
+  field(DESC, "Read Data sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadTxFromHardware RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#  info(archive, "Monitor, 00:01:00")
+}
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware1") {
+  field(DESC, "Read MEAS sent from Hardware1")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware1 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#   info(archive, "Monitor, 00:01:00")
+}
+
+
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware2") {
+  field(DESC, "Read MEAS sent from Hardware2")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware2 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware3") {
+  field(DESC, "Read MEAS sent from Hardware3")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware3 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#   info(archive, "Monitor, 00:01:00")
+}
+
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware4") {
+  field(DESC, "Read MEAS sent from Hardware4")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware4 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#   info(archive, "Monitor, 00:01:00")
+}
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware5") {
+  field(DESC, "Read MEAS sent from Hardware5")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware5 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#   info(archive, "Monitor, 00:01:00")
+
+}
+
+record(stringin, "BL6:SE:Rheometer:StrReadMEASTxFromHardware6") {
+  field(DESC, "Read MEAS sent from Hardware6")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasDataFromHardware6 RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#   info(archive, "Monitor, 00:01:00")
+}
+
+
+record(ai, "BL6:SE:Rheometer:ReadInterval") {
+  field(DESC, "Reads the interval column number")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadIntervalFromHardware RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:01:00")
+
+}
+
+record(ai, "BL6:SE:Rheometer:ReadMeasPoint") {
+  field(DESC, "Reads the current interval Meas Point")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadMeasPointFromHardware RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:01:00")
+  field(MDEL, "0.5")
+}
+
+
+record(ai, "BL6:SE:Rheometer:ReadIntervalTime") {
+  field(DESC, "Reads the current interval time")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadIntervalTimeFromHardware RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "2")
+  field(EGU, "s")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+
+record(ai, "BL6:SE:Rheometer:ReadStatus") {
+  field(DESC, "Reads some of the status")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadStatusFromHardware RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  info(archive, "Monitor, 00:01:00")
+}
+
+record(ai, "BL6:SE:Rheometer:ReadShearRate") {
+  field(DESC, "Read ShearRate sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadShearRate RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "5")
+  field(EGU, "1/s")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+record(ai, "BL6:SE:Rheometer:ReadShearStress") {
+  field(DESC, "Read ShearStress sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadShearStress RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "5")
+  field(EGU, "Pa")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+record(ai, "BL6:SE:Rheometer:ReadTorque") {
+  field(DESC, "Read Torque sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadTorque RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "5")
+  field(EGU, "Nm") 
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+record(ai, "BL6:SE:Rheometer:ReadTemperature") {
+  field(DESC, "Read Temp sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadTemperature RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "3")
+  field(EGU, "K")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+record(ai, "BL6:SE:Rheometer:ReadStrain") {
+  field(DESC, "Read Strain sent from Hardware")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadStrain RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "3")
+  field(EGU, "%")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+record(ai, "BL6:SE:Rheometer:TriggerVoltage") {
+  field(DESC, "Aux Input Voltage to trigger")
+  field(DTYP, "stream")
+  field(INP, "@spyTxFromHardware.proto ReadInputVol RxFromHrdwr")
+  field(SCAN, "I/O Intr")
+  field(PREC, "3")
+  field(EGU, "V")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+
+
+#this ai below checks if is ok to send the relay latch
+#That happens when the value is 1 and that means the
+#status from the spy packet has :S
+
+#record(ai, "BL6:SE:Rheometer:ReadClearance") {
+#  field(DESC, "Read to see if we can set the realy 1")
+#  field(DTYP, "stream")
+#  field(INP, "@spyTxFromHardware.proto ReadState RxFromHrdwr")
+#  field(SCAN, "I/O Intr")
+#}
+
+
+
+
+
+###########################################################
+#Reads what the vendor software is sending to the hardware#
+###########################################################
+record(stringin, "BL6:SE:Rheometer:StrReadTxFromSoftware") {
+  field(DESC, "Read Command sent from software")
+  field(DTYP, "stream")
+  field(INP, "@spyTxtoHardware.proto ReadTxFromSoftware TxFromHrdwr")
+  field(SCAN, "I/O Intr")
+#  info(archive, "Monitor, 00:01:00")
+}
+
+

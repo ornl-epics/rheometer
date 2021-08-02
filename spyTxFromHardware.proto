@@ -1,0 +1,120 @@
+LockTimeout = 10000;
+ReplyTimeout = 5000;
+ReadTimeout = 10000;
+WriteTimeout = 1000;
+InTerminator = "\n";
+
+#OutTerminator = "\r";
+#InTerminator = "\x03\r\n";
+#ReplyTimeout = 1000;
+
+
+
+
+#Read the data sent to the software from the hardware
+#   in  ":MEAS[%#s"
+#   in ":MEAS[%1c%*#s"  this gets the first interval string format
+#   The bottom parser should be tested with different experiment setups 
+#     in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%*f,%*f,%*f,%*f,%*f,%*f,%*d,%*d,%*f,%*f,%*f,%*9c,%*f,%f%*#s"
+
+ReadRheoVersion{
+   in   "#VERS[%*1c%#s"
+}
+
+
+ReadTxFromHardware{
+   in  "%#s"
+}
+
+ReadMeasDataFromHardware1{
+in ":MEAS[%39c%*#s"
+}
+
+ReadMeasDataFromHardware2{
+in ":MEAS[%*39c%39c%*#s"
+}
+
+ReadMeasDataFromHardware3{
+in ":MEAS[%*39c%*39c%39c%*#s"
+}
+
+ReadMeasDataFromHardware4{
+in ":MEAS[%*39c%*39c%*39c%39c%*#s"
+}
+
+ReadMeasDataFromHardware5{
+#   in ":MEAS[%*39c%#s"
+in ":MEAS[%*39c%*39c%*39c%*39c%39c%*#s"
+}
+
+ReadMeasDataFromHardware6{
+#   in ":MEAS[%*39c%#s"
+in ":MEAS[%*39c%*39c%*39c%*39c%*39c%39c%*#s"
+}
+
+ReadIntervalFromHardware{
+#   in ":MEAS[%d,%*#s" this gets the interval 
+   in ":MEAS[%*d,%d%*#s"
+}
+
+ReadMeasPointFromHardware{
+  #   in ":MEAS[%d,%*#s" this gets the interval
+  in ":MEAS[%d,%*#s" 
+}
+
+ReadIntervalTimeFromHardware{
+  #   in ":MEAS[%d,%*#s" this gets the interval
+  in ":MEAS[%*d,%*d,%f,%*#s"
+}
+
+
+
+ReadStatusFromHardware{
+  in ":STAT[(%?d%*#s"
+}
+
+
+#%*[^,]
+
+ReadShearStress{
+   in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%f,%*#s" 
+}
+
+
+ReadShearRate{
+   in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%*f,%f,%*#s"
+}
+
+ReadTemperature{
+   in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%*f,%*f,%*f,%f,%*#s"
+
+#    %*[^,]
+}
+
+
+
+ReadTorque{
+
+#search for string auto and then parse to get torque, assuming auto is always name of the script in event mode. notice script name can be WMA.Dy_auto or just Dy_auto
+in ":MEAS%*[^to]%*3c,%*f,%f)%*#s"
+     
+}
+
+ReadStrain{
+    in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%*f,%*f,%f,%*#s"
+}
+
+ReadInputVol{
+   in ":MEAS[%*d,%*d,%*f,%*f,%*f,(),(%*f,%*f,%*f,%*f,%*f,%*f,%*f,%*f,%f,%*#s"
+
+}
+
+
+
+#################################################
+#status parsing for relay command sync
+#################################################
+#ReadState{
+#	in "%#{:MEAS%*#s|:STAT%*#s|%*#s}"
+#}
+

@@ -1,0 +1,31 @@
+record (calc, "BL6:SE:Rheometer:Relay1Counter")
+{
+        field(DESC, "Counter for relay1 latched")
+        field(PINI, "YES")
+        field(SCAN, ".1 second")  
+        field(INPA, "BL6:SE:Rheometer:getRelay1")
+	field(INPB, "BL6:SE:Rheometer:Relay1Counter")	
+        field(CALC, "(A=1)?(B+0.2):B")
+        field(EGU,  "Seconds")
+}
+
+record (calcout, "BL6:SE:Rheometer:Relay1CounterReset")
+{
+        field(SCAN, "Passive")
+	field(DESC, "Counter Reset Relay1")
+        field(INPA, "BL6:SE:Rheometer:Relay1Counter  ")
+        field(INPB, "BL6:SE:Rheometer:setRelay1 CPP")
+        field(CALC, "(A>2 & B=1)?0:A")
+        field(OUT,  "BL6:SE:Rheometer:Relay1Counter CA")
+}
+
+record (calcout, "BL6:SE:Rheometer:Relay1Unlatch")
+{
+        field(SCAN, "Passive")
+        field(DESC, "Unlatch Relay")
+        field(INPA, "BL6:SE:Rheometer:Relay1Counter CPP")
+        field(INPB, "BL6:SE:Rheometer:setRelay1")
+        field(CALC, "(A>2)?0:1")
+        field(OUT,  "BL6:SE:Rheometer:setRelay1 CA")
+}
+

@@ -1,0 +1,925 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>RheometerAdvanced</name>
+  <height>800</height>
+  <actions>
+  </actions>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(BL):Rheometer:StrReadTxFromSoftware</pv_name>
+    <x>202</x>
+    <y>42</y>
+    <width>577</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(BL):Rheometer:StrReadTxFromHardware</pv_name>
+    <x>202</x>
+    <y>72</y>
+    <width>577</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>RxFromHardware</text>
+    <x>28</x>
+    <y>66</y>
+    <width>169</width>
+    <height>31</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>TxToHardware</text>
+    <x>74</x>
+    <y>36</y>
+    <width>123</width>
+    <height>37</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware1</pv_name>
+    <x>30</x>
+    <y>174</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware2</pv_name>
+    <x>405</x>
+    <y>174</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware3</pv_name>
+    <x>32</x>
+    <y>222</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware4</pv_name>
+    <x>405</x>
+    <y>222</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware5</pv_name>
+    <x>32</x>
+    <y>270</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(BL):Rheometer:StrReadMEASTxFromHardware6</pv_name>
+    <x>407</x>
+    <y>270</y>
+    <width>374</width>
+    <height>22</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_13</name>
+    <pv_name>$(BL):Rheometer:ReadShearRate</pv_name>
+    <x>646</x>
+    <y>384</y>
+    <width>133</width>
+    <height>19</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Shear Rate</text>
+    <x>530</x>
+    <y>381</y>
+    <width>109</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_14</name>
+    <pv_name>$(BL):Rheometer:ReadShearStress</pv_name>
+    <x>646</x>
+    <y>354</y>
+    <width>133</width>
+    <height>19</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Shear Stress</text>
+    <x>530</x>
+    <y>351</y>
+    <width>109</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Temperature</text>
+    <x>524</x>
+    <y>435</y>
+    <width>115</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_15</name>
+    <pv_name>$(BL):Rheometer:ReadTemperature</pv_name>
+    <x>646</x>
+    <y>441</y>
+    <width>133</width>
+    <height>19</height>
+    <format>1</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_16</name>
+    <pv_name>$(BL):Rheometer:ReadTorque</pv_name>
+    <x>646</x>
+    <y>472</y>
+    <width>133</width>
+    <height>19</height>
+    <format>2</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Torque</text>
+    <x>557</x>
+    <y>469</y>
+    <width>82</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_17</name>
+    <pv_name>$(BL):Rheometer:ReadIntervalTime</pv_name>
+    <x>646</x>
+    <y>327</y>
+    <width>133</width>
+    <height>19</height>
+    <format>1</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Interval time</text>
+    <x>527</x>
+    <y>324</y>
+    <width>112</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Strain</text>
+    <x>560</x>
+    <y>411</y>
+    <width>79</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_18</name>
+    <pv_name>$(BL):Rheometer:ReadStrain</pv_name>
+    <x>646</x>
+    <y>414</y>
+    <width>133</width>
+    <height>19</height>
+    <format>1</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_23</name>
+    <pv_name>$(BL):Rheometer:StrReadRheoVersion</pv_name>
+    <x>202</x>
+    <y>12</y>
+    <width>577</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>RheoVersion</text>
+    <x>104</x>
+    <y>6</y>
+    <width>169</width>
+    <height>31</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>MP Int  Int. Time</text>
+    <x>37</x>
+    <y>150</y>
+    <width>137</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Shear Stress</text>
+    <x>431</x>
+    <y>150</y>
+    <width>103</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>Shear Rate</text>
+    <x>635</x>
+    <y>150</y>
+    <width>103</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>Temp</text>
+    <x>122</x>
+    <y>198</y>
+    <width>55</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_22</name>
+    <text>Strain</text>
+    <x>37</x>
+    <y>198</y>
+    <width>55</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>Torque</text>
+    <x>635</x>
+    <y>246</y>
+    <width>55</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(BL):Rheometer:getRelay1</pv_name>
+    <bit>0</bit>
+    <x>297</x>
+    <y>471</y>
+    <width>22</width>
+    <height>22</height>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(BL):Rheometer:setRelay1BO</pv_name>
+    <x>188</x>
+    <y>460</y>
+    <height>38</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Off" red="60" green="100" blue="60">
+      </color>
+    </off_color>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(BL):Rheometer:ReadInterval</pv_name>
+    <x>185</x>
+    <y>354</y>
+    <width>133</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(BL):Rheometer:ReadMeasPoint</pv_name>
+    <x>185</x>
+    <y>388</y>
+    <width>133</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Interval Measuring Point</text>
+    <y>377</y>
+    <width>177</width>
+    <height>43</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Interval</text>
+    <x>102</x>
+    <y>351</y>
+    <width>75</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(BL):Rheometer:getAnalog1</pv_name>
+    <x>182</x>
+    <y>583</y>
+    <width>133</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(BL):Rheometer:getAnalog2</pv_name>
+    <x>182</x>
+    <y>616</y>
+    <width>133</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>M2</text>
+    <x>144</x>
+    <y>609</y>
+    <width>27</width>
+    <height>34</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>M1</text>
+    <x>131</x>
+    <y>577</y>
+    <width>40</width>
+    <height>32</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>Status</text>
+    <x>102</x>
+    <y>321</y>
+    <width>75</width>
+    <height>26</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_29</name>
+    <pv_name>$(BL):Rheometer:ReadStatus</pv_name>
+    <x>185</x>
+    <y>324</y>
+    <width>136</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_30</name>
+    <pv_name>$(BL):Rheometer:TriggerVoltage</pv_name>
+    <x>188</x>
+    <y>427</y>
+    <width>133</width>
+    <height>26</height>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>Read Aux Trigger V</text>
+    <x>22</x>
+    <y>415</y>
+    <width>155</width>
+    <height>43</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
+    <text>Aux Volt</text>
+    <x>623</x>
+    <y>198</y>
+    <width>103</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_31</name>
+    <text>Exp Name</text>
+    <x>301</x>
+    <y>246</y>
+    <width>103</width>
+    <height>25</height>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_32</name>
+    <text>Cycle Interval</text>
+    <x>66</x>
+    <y>466</y>
+    <width>112</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Script for Rhemoter Windows Software          Event ControlJump Forward by 1 interval(s)if U(-6)&gt;0.2VGenerate Meas.point...if 17 in status listStart next meas point intervalif 16 in status list</text>
+    <x>321</x>
+    <y>540</y>
+    <width>207</width>
+    <height>109</height>
+    <font>
+      <font family="Sans" style="BOLD_ITALIC" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Attention" red="255" green="160" blue="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="OPI_Background" red="255" green="255" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_36</name>
+    <text>Experimental section-The parsing of spy data can be offset by vendor software experiment or system configuration modifications. If values do not match, use M1 and M2 for two variable readout only. Mapping of variables is under control panel in RheoPlus</text>
+    <x>32</x>
+    <y>108</y>
+    <width>749</width>
+    <height>43</height>
+    <font>
+      <font family="Sans" style="BOLD_ITALIC" size="7.920792079207921">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Attention" red="255" green="160" blue="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="OPI_Background" red="255" green="255" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_37</name>
+    <text>Aux Pulse Width</text>
+    <x>19</x>
+    <y>552</y>
+    <width>156</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Input</name>
+    <pv_name>$(BL):Rheometer:SyncTrigger.HIGH</pv_name>
+    <x>185</x>
+    <y>552</y>
+    <width>133</width>
+    <height>26</height>
+    <background_color>
+      <color name="WritePV_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Menu Button</name>
+    <pv_name>$(BL):Rheometer:SyncDisable</pv_name>
+    <x>181</x>
+    <y>504</y>
+    <width>136</width>
+    <height>21</height>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_41</name>
+    <text>SYNC to Measurements</text>
+    <y>502</y>
+    <width>177</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Rheometer Widnows Software Set Averaging Over = Meas Pt Duration</text>
+    <x>321</x>
+    <y>292</y>
+    <width>261</width>
+    <height>216</height>
+    <font>
+      <font family="PakTypeNaqsh" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Attention" red="255" green="160" blue="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="OPI_Background" red="255" green="255" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>On this screen set Aux Pulse Width to %10 of the time used on Averaging Over and Meas Point Duration</text>
+    <x>320</x>
+    <y>424</y>
+    <width>239</width>
+    <height>129</height>
+    <font>
+      <font family="PakTypeNaqsh" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="77" green="77" blue="77">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Attention" red="255" green="160" blue="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <actions>
+    </actions>
+    <border_color>
+      <color name="OPI_Background" red="255" green="255" blue="255">
+      </color>
+    </border_color>
+  </widget>
+</display>

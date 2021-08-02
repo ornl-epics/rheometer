@@ -1,0 +1,64 @@
+##################################################
+#
+# Protocol File
+#
+# Protocol file for ICP I-7002 4 analog 5 digital 4 Relay
+# SNS, Jan  2016
+#
+# $1 = ICP address: 01
+# $2 = ICP channel.  This is 2-digit hex
+##################################################
+
+##################################################
+# General Settings
+##################################################
+
+Terminator = CR;
+ReplyTimeout = 1000;
+locktimeout = 5000;
+readtimeout  = 1000;
+extrainput   = Ignore;
+
+###################################################
+# Get functions
+###################################################
+
+# Read an analog input from 7002 module
+# #AAN, where AA is the module address and N is 1-digit 
+# input channel.  
+getAI1 {
+   out "#\$1\$2";
+   in ">%f";
+}
+
+# Read the digital input channels from 7002 module
+# command @AADI 
+# Response 
+# Strng format
+getSI {
+  out "@\$1DI";
+  in  "%s";
+}
+
+#hex format
+getDI {
+  out "@\$1DI";
+  in  "!\$100%1x";
+}
+
+###################################################
+# Set functions
+###################################################
+
+# Set the digital out: @AADO00 (AA=addr, 00=2 digit of hex)
+setDO {
+  out "@\$1DO0%1i" ;
+  in  "!\$1";
+}
+
+# Set the digital out: @AADO00 (AA=addr, 00=2 digit of hex)
+setDO1 {
+  out "@\$1DO0%1i" ;
+  in  "!\$1";
+}
+

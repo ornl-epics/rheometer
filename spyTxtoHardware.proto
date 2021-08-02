@@ -1,0 +1,15 @@
+LockTimeout = 10000;
+ReplyTimeout = 1000;
+ReadTimeout = 500;
+WriteTimeout = 1000;
+
+
+#Read the command sent to the hardware from the software
+ReadTxFromSoftware{
+   in  "%#s"
+}
+
+
+
+
+

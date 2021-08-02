@@ -1,0 +1,126 @@
+record(mbbiDirect, "BL6:SE:Rheometer:getRelay1") {
+  field(DESC, "Relay1 Input1 Status")
+  field(DTYP, "stream")
+  field(INP, "@i7002.proto getDI(01) icp1 0")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  info(archive, "Monitor, 00:01:00")
+}
+
+
+record(ai, "BL6:SE:Rheometer:getAnalog1") {
+  field(DESC, "Analog V Input1 mapped Rheo")
+  field(DTYP, "stream")
+  field(INP, "@i7002.proto getAI1(01,0) icp1 0")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  field(EGU, "V")
+  field(PREC, "3")
+  field(MDEL, "0.001")
+  field(ADEL, "0.01")
+  info(archive, "Monitor, 00:01:00")
+}
+
+record(ai, "BL6:SE:Rheometer:getAnalog2") {
+  field(DESC, "Analog V Input2 mapped Rheo")
+  field(DTYP, "stream")
+  field(INP, "@i7002.proto getAI1(01,1) icp1 0")
+  field(SCAN, "1 second")
+  field(PINI, "YES")
+  field(EGU, "V")
+  field(PREC, "3")
+  field(MDEL, "0.001")
+  field(ADEL, "0.01")
+  info(archive, "Monitor, 00:01:00")
+}
+
+##########################################################################
+#Sync section
+#relay must be set right after a new measuring point has arrived otherwise,
+#the trigger could come in between measuring points and cause double jumps
+#on the rheometer columns
+#########################################################################
+
+record(bi, "BL6:SE:Rheometer:SyncDisable") {
+  field(DTYP, "Soft Channel")
+  info(DESC, "Enable or disable Sync")
+  info(archive, "Monitor, 00:01:00")
+  field(ZNAM, "SyncEnabled")
+  field(ONAM, "SyncDisabled")
+
+}
+
+
+
+record(bo, "BL6:SE:Rheometer:setRelay1BO") {
+  field(DTYP, "Soft Channel")
+  info(DESC, "Latch button until next mes point")
+  info(archive, "Monitor, 00:01:00")
+}
+###########################################################################
+#If a new meas point arrives and the button to trigger is latched send the hardware trigger
+###########################################################################
+
+record(calcout, "BL6:SE:Rheometer:SyncTriggerCalc") {
+          field(DTYP,  "Soft Channel")
+          field(INPA, "BL6:SE:Rheometer:ReadMeasPoint CPP") 
+          field(INPB, "BL6:SE:Rheometer:setRelay1BO")
+          field(INPC, "BL6:SE:Rheometer:SyncDisable")
+          field(OOPT,  "When Non-zero")
+          field(CALC,  "(A#0)&(B=1)&(C=0)?1:0")
+          field(OUT,   "BL6:SE:Rheometer:SyncTrigger PP")
+          info(archive, "Monitor, 00:01:00")
+}
+
+record(calcout, "BL6:SE:Rheometer:NoSyncTriggerCalc") {
+          field(DTYP,  "Soft Channel")
+          field(INPA, "BL6:SE:Rheometer:setRelay1BO CPP")
+          field(INPB, "BL6:SE:Rheometer:SyncDisable")
+          field(OOPT,  "When Non-zero")
+          field(CALC,  "(A=1)&(B=1)?1:0")
+          field(OUT,   "BL6:SE:Rheometer:SyncTrigger PP")
+          info(archive, "Monitor, 00:01:00")
+}
+
+
+
+record(bo, "BL6:SE:Rheometer:SyncTrigger"){
+	  info(DESC, "Set Hrdwr Relay to Trigger Rheometer") 
+	  field(DTYP, "stream")
+	  field(OUT, "@i7002.proto setDO1(01) icp1 0") 
+	  info(archive, "Monitor, 00:01:00")
+	  field(HIGH, "1.5")
+}
+###########################################################################
+#Reset the soft channel setrelay1B0 after the trigger was sent
+#The Every Time ensures the record outputs all the time it is processed.
+#Whenever a synctrigger arrives the calcout is processed and resets the button
+###########################################################################
+
+record(calcout, "BL6:SE:Rheometer:ResetTriggerButton") {
+          field(DTYP,  "Soft Channel")
+          field(INPA, "BL6:SE:Rheometer:SyncTrigger CPP")
+          field(INPB, "BL6:SE:Rheometer:setRelay1BO")
+          field(OOPT,  "Every Time")
+          field(CALC,  "(B=1)?0:0")
+          field(OUT,   "BL6:SE:Rheometer:setRelay1BO CA")
+          info(archive, "Monitor, 00:01:00")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
